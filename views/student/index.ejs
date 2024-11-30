@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row gutter-y-30">
+        <div class="col-lg-12">
+            <a href="/student/create" class="btn btn-primary py-2 px-3 ">Add New Student</a>
+            <a href="/student/unverified" class="btn btn-danger py-2 px-3 ">Unverified Student</a>
+            <br>
+            <br>
+        </div>
+        <% students.reverse().forEach((student, index) => { %>
+            <div class="col-xl-3 col-lg-4 col-sm-6">
+                <div class="student__wrapper">
+                    <div class="student__wrapper__image">
+                        <img src="/image/<%= student.photo %>" alt="image">
+                    </div><!-- /.student__wrapper__image -->
+                    <div class="student__wrapper__content">
+                        <h3 class="student__wrapper__name"><%= student.name %></h3><!-- /.student__wrapper__name -->
+                        <div class="student__wrapper__phone"><a href="tel:<%= student.phone %>"><%= student.phone %></a></div><!-- /.student__wrapper__phone -->
+                        <div class="student__wrapper__email"><a href=""><%= student.email %></a></div><!-- /.student__wrapper__email -->
+                    </div><!-- /.student__wrapper__content -->
+                    <div class="student__wrapper__footer">
+                        <a class="btn btn-info py-2 px-3" href="/student/<%= student.id %>"><i class="fas fa-eye"></i></a>
+                        <a class="btn btn-warning py-2 px-3" href="/student/edit/<%= student.id %>"><i class="fas fa-edit"></i></a>
+                        <a class="btn btn-danger py-2 px-3 deleted-btn" href="/student/delete/<%= student.id %>"><i class="fas fa-trash"></i></a>
+                    </div><!-- /.student__wrapper__footer -->
+                </div><!-- /.student__wrapper -->
+            </div><!-- /.col-xl-3 col-lg-4 col-sm-6 -->
+        <% }) %>
+    </div>
+</div>

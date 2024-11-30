@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <a href="/student" class="btn btn-primary py-2 px-3 ">Back</a>
+            <br>
+            <br>
+            <div class="card shadow px-3 py-4">
+                <div class="card-body">
+                    <h2>All Unverified Student</h2>
+                    <hr>
+                    <table class="table table-starip motabbir-student">
+                        <thead>
+                            <tr class="align-middle">
+                                <th>No</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Call</th>
+                                <th>Location</th>
+                                <th>Photo</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% students.reverse().forEach((student, index) => { %>
+                                <tr class="align-middle">
+                                    <th><%= index + 1 %></th>
+                                    <th><%= student.name %></th>
+                                    <th><%= student.email %></th>
+                                    <th><%= student.phone %></th>
+                                    <th><%= student.location %></th>
+                                    <th><img src="/image/<%= student.photo %>" alt="image"></th>
+                                    <th>
+                                        <a class="btn btn-info py-2 px-3" href="/student/<%= student.id %>"><i class="fas fa-eye"></i></a>
+                                        <a class="btn btn-warning py-2 px-3" href="/student/edit/<%= student.id %>"><i class="fas fa-edit"></i></a>
+                                        <a class="btn btn-danger py-2 px-3 deleted-btn" href="/student/delete/<%= student.id %>"><i class="fas fa-trash"></i></a>
+                                    </th>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div><!-- /.card-body -->
+            </div><!-- /.card -->
+        </div>
+    </div>
+</div>
