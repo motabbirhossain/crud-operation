@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <a href="/student" class="btn btn-primary py-2 px-3 ">Back</a>
+            <br>
+            <br>
+            <div class="card shadow px-3 py-4 create-form">
+                <div class="card-header">
+                    <h2>Create Student</h2>
+                </div><!-- /.card-body -->
+                <div class="card-body">
+                    <form action="" method="post"  enctype="multipart/form-data">
+                        <div class="form-group mb-3">
+                            <label for="name">Name</label>
+                            <input class="form-control" type="text" name="name" id="name" placeholder="Inter Your Name">
+                        </div><!-- /.form-group -->
+                        <div class="form-group mb-3">
+                            <label for="email">Email</label>
+                            <input class="form-control" type="email" name="email" id="email" placeholder="Inter Your Email">
+                        </div><!-- /.form-group -->
+                        <div class="form-group mb-3">
+                            <label for="call">Call</label>
+                            <input class="form-control" type="number" name="phone" id="call" placeholder="Inter Your Number">
+                        </div><!-- /.form-group -->
+                        <div class="form-group mb-3">
+                            <label for="name">Location</label>
+                            <select name="location" class="form-control" id="name">
+                                <option value="Pabna">Pabna</option>
+                                <option value="Rajshahi">Rajshahi </option>
+                                <option value="Dhaka">Dhaka</option>
+                                <option value="Chattogram">Chattogram</option>
+                                <option value="Rangpur">Rangpur</option>
+                                <option value="Sylhet">Sylhet</option>
+                                <option value="Mymensingh">Mymensingh</option>
+                            </select><!-- /# -->
+                        </div><!-- /.form-group -->
+                        <div class="form-group mb-3">
+                            <label for="">Photo</label>
+                            <br>
+                            <img class="prelode__student" src="" alt="image">
+                            <br>
+                            <label for="uplode__image"><img  src="../image/image-icon.jpg" alt></label>
+                            <input type="file" id="uplode__image" name="studentImage">
+                        </div><!-- /.form-group -->
+                        <div class="form-group">
+                            <button  type="submit" class="btn btn-primary px-4 py-2">Submit</button>
+                        </div><!-- /.form-group -->
+                    </form>
+                </div><!-- /.card-body -->
+            </div><!-- /.card -->
+        </div>
+    </div>
+</div>

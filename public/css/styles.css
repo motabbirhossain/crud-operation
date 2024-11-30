@@ -1,0 +1,140 @@
+*,
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Manrope", serif;
+}
+
+body{
+    font-size: 17px;
+    font-weight: 600;
+    color: #000;
+    background-color: #fff;
+    font-family: "Manrope", serif;
+}
+
+.motabbir-student img{
+    object-fit: cover;
+    align-items: center;
+    width: 100%;
+    max-width: 60px;
+    height: 60px;
+    border-radius: 4px;
+}
+
+input[type="file"]{
+    display: none;
+}
+label img{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.prelode__student{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* show-card */
+.show-card .card-body__image img{
+    object-fit: cover;
+    width: 100%;
+    max-height: 400px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+}
+.show-card .author__name span,
+.show-card .author__email span,
+.show-card .author__call span,
+.show-card .author__location span{
+    font-size: 20px;
+    color: #000000;
+    text-transform: capitalize;
+    max-width: 120px;
+    width: 100%;
+}
+.author__email a,
+.author__call a{
+    text-decoration: none;
+    color: #000000;
+    transition: all 0.4s ease-in-out;
+
+}
+.author__email a:hover,
+.author__call a:hover{
+    color: #0d6efd;
+}
+.show-card .author__name ,
+.show-card .author__email ,
+.show-card .author__call ,
+.show-card .author__location {
+    text-transform: lowercase;
+    display: flex;
+    font-size: 20px;
+    color: #000000;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.show-card .author__name{
+    text-transform: uppercase;
+}
+.show-card .author__location{
+    text-transform: capitalize;
+}
+
+.student__wrapper{
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 20px;
+}
+.student__wrapper__image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-height: 230px;
+}
+.student__wrapper__content{
+    margin-top: 30px;
+    text-align: center;
+}
+.student__wrapper__name{
+    font-size: 22px;
+    color: #000;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.student__wrapper__phone a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 17px;
+    font-weight: 700;
+    color: #000;
+    transition: all 0.4s ease-in-out;
+}
+.student__wrapper__phone a:hover,
+.student__wrapper__email a:hover{
+    text-decoration: underline;
+}
+.student__wrapper__email a{
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    color: #000;
+    transition: all 0.4s ease-in-out;
+}
+.student__wrapper__footer{
+    margin-top: 20px;
+    border-top: 1px solid #000;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gutter-y-30{
+    --bs-gutter-y: 30px
+}

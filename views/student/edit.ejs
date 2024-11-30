@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <a href="/student" class="btn btn-primary py-2 px-3 ">Back</a>
+            <br>
+            <br>
+            <div class="card shadow px-3 py-4 create-form">
+                <div class="card-header">
+                    <h2>Update: <%= student.name %></h2>
+                </div><!-- /.card-body -->
+                <div class="card-body">
+                    <form action="/student/update/<%= student.id %>" method="post"  enctype="multipart/form-data">
+                        <div class="form-group mb-3">
+                            <label for="name">Name</label>
+                            <input class="form-control" value="<%= student.name %>" type="text" name="name" id="name" placeholder="Inter Your Name">
+                        </div><!-- /.form-group -->
+                        <div class="form-group mb-3">
+                            <label for="email">Email</label>
+                            <input class="form-control" value="<%= student.email %>" type="email" name="email" id="email" placeholder="Inter Your Email">
+                        </div><!-- /.form-group -->
+                        <div class="form-group mb-3">
+                            <label for="call">Call</label>
+                            <input class="form-control" type="number" value="<%= student.phone %>" name="phone" id="call" placeholder="Inter Your Number">
+                        </div><!-- /.form-group -->
+                        <div class="form-group mb-3">
+                            <label for="name">Location</label>
+                            <select name="location" class="form-control" id="name">
+                                <option <% if (student.location == "Pabna" ) { %> selected <% } %> value="Pabna">Pabna</option>
+                                <option <% if (student.location == "Rajshahi" ) { %> selected <% } %> value="Rajshahi">Rajshahi </option>
+                                <option <% if (student.location == "Dhaka" ) { %> selected <% } %> value="Dhaka">Dhaka</option>
+                                <option <% if (student.location == "Chattogram" ) { %> selected <% } %> value="Chattogram">Chattogram</option>
+                                <option <% if (student.location == "Rangpur" ) { %> selected <% } %> value="Rangpur">Rangpur</option>
+                                <option <% if (student.location == "Sylhet" ) { %> selected <% } %> value="Sylhet">Sylhet</option>
+                                <option <% if (student.location == "Mymensingh" ) { %> selected <% } %> value="Mymensingh">Mymensingh</option>
+                            </select><!-- /# -->
+                        </div><!-- /.form-group -->
+                        <div class="form-group mb-3">
+                            <label for="">Photo</label>
+                            <br>
+                            <img class="prelode__student" src="/image/<%= student.photo %>" alt="image">
+                            <br>
+                            <label for="uplode__image"><img  src="/image/image-icon.jpg" alt></label>
+                            <input type="file" id="uplode__image" name="studentImage">
+                        </div><!-- /.form-group -->
+                        <div class="form-group">
+                            <button  type="submit" class="btn btn-primary px-4 py-2">Update</button>
+                        </div><!-- /.form-group -->
+                    </form>
+                </div><!-- /.card-body -->
+            </div><!-- /.card -->
+        </div>
+    </div>
+</div>
